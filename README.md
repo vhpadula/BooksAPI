@@ -42,7 +42,7 @@ Send a POST request to `http://localhost:9090/api/books` with the following JSON
 {
     "title": "Book Title",
     "language": "Book Language",
-    "yearOfPublication": Year of Publication,
+    "yearOfPublication": 1234,
     "authors": "Book Authors"
 }
 ```
@@ -55,7 +55,7 @@ Send a PUT request to `http://localhost:9090/api/books/{id}`, replacing `{id}` w
 {
     "title": "Updated Book Title",
     "language": "Updated Book Language",
-    "yearOfPublication": Updated Year of Publication,
+    "yearOfPublication": 1234,
     "authors": "Updated Book Authors"
 }
 ```
