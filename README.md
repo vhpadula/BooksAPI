@@ -1,5 +1,84 @@
-# BooksAPI
-API created for getting used to Spring 3
+# Book Management API
+
+This repository contains a Spring Boot application for a Book Management API. The API allows you to perform CRUD operations on books and their reviews.
+
+## Features
+
+- Get all books
+- Get a specific book by ID
+- Create a new book
+- Update an existing book
+- Delete a book
+- Get all reviews for a specific book
+- Create a new review for a specific book
+
+## Running the Application
+
+To run this application, you'll need to have Java and Maven installed on your machine. You can start the application by running the following command in the terminal:
+
+```bash
+./mvnw spring-boot:run
+```
+
+The application will start and by default can be accessed at http://localhost:9090.
+
+## Using the API with Postman
+
+You can use Postman to send requests to this API. Here are the steps for each operation:
+
+### Get All Books
+
+Send a GET request to `http://localhost:9090/api/books`.
+
+### Get a Specific Book
+
+Send a GET request to `http://localhost:9090/api/books/{id}`, replacing `{id}` with the ID of the book.
+
+### Create a New Book
+
+Send a POST request to `http://localhost:9090/api/books` with the following JSON body:
+
+```json
+{
+    "title": "Book Title",
+    "language": "Book Language",
+    "yearOfPublication": Year of Publication,
+    "authors": "Book Authors"
+}
+```
+
+### Update a Book
+
+Send a PUT request to `http://localhost:9090/api/books/{id}`, replacing `{id}` with the ID of the book. Include the following JSON in the request body with the updated book details:
+
+```json
+{
+    "title": "Updated Book Title",
+    "language": "Updated Book Language",
+    "yearOfPublication": Updated Year of Publication,
+    "authors": "Updated Book Authors"
+}
+```
+### Delete a Book
+
+Send a DELETE request to http://localhost:9090/api/books/{id}, replacing {id} with the ID of the book.
+
+### Get All Reviews for a Book
+
+Send a GET request to http://localhost:9090/api/books/{id}/reviews, replacing {id} with the ID of the book.
+
+### Create a New Review for a Book
+
+Send a POST request to http://localhost:9090/api/books/{id}/reviews, replacing {id} with the ID of the book. Include the following JSON in the request body:
+
+```json
+{
+    "review": "Your review text"
+}
+```
+
+License
+MIT
 
 ## Lesson 1: Initial Architecture and API Implementation
 Added initial arquitecture. It contains packages for the models, controllers, repositories, services, dto, util and unit testing for each of them. Added mocked database to resources. 
